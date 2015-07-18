@@ -21,7 +21,7 @@ public class HelloController {
     private String getTestData() {
         String resulthtml;
         try {
-            Document doc = Jsoup.connect("http://rst.ua/oldcars/audi/").get();
+            Document doc = Jsoup.connect("http://auto.ria.com/search/?marka_id=6&model_id=47&state=0#power_name=1&category_id=1&marka_id[0]=6&model_id[0]=47&s_yers[0]=0&po_yers[0]=0&state[0]=0&city[0]=0&currency=1&fuelRatesType=city&countpage=10").get();
             resulthtml = doc.outerHtml();
         } catch (Exception e) {
             System.out.println(e);;
